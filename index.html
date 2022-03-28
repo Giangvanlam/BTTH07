@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <form action="" onsubmit=" return (check_error())">
+            <h1>Registration Form</h1>
+            <div class="box-user-id">
+                <div>
+                    <div class="left">
+                        <label for="user-id">User id:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="user-id" id="user-id" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+            <div class="box-password">
+                <div>
+                    <div class="left">
+                        <label for="password">Password:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="password" id="password" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+            <div class="box-name">
+                <div>
+                    <div class="left">
+                        <label for="name">Name:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="name" id="name" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+            <div class="box-address">
+                <div>
+                    <div class="left">
+                        <label for="address">Address:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="address" id="address" autocomplete="off">
+                    </div>
+                </div>
+            </div>
+            <div class="box-country">
+                <div>
+                    <div class="left">
+                        <label for="country">Country:</label>
+                    </div>
+                    <div class="right">
+                        <select name="country" id="country" required>
+							<option value="">(Please select a country)</option>
+							<option value="vietnam">Việt Nam</option>
+						</select>
+                    </div>
+                </div>
+            </div>
+            <div class="box-zip-code">
+                <div>
+                    <div class="left">
+                        <label for="zip-code">ZIP Code:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="zip-code" id="zip-code" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+            <div class="box-email">
+                <div>
+                    <div class="left">
+                        <label for="email">Email:</label>
+                    </div>
+                    <div class="right">
+                        <input type="text" name="email" id="email" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+            <div class="box-sex">
+                <div>
+                    <div class="left">
+                        <label for="sex">Sex:</label>
+                    </div>
+                    <div class="right">
+                        <input type="radio" name="sex" id="male" required><span>Male</span>
+                        <input type="radio" name="sex" id="female" required><span>Female</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-language">
+                <div>
+                    <div class="left">
+                        <label for="language">Language:</label>
+                    </div>
+                    <div class="right">
+                        <input type="checkbox" name="language" id="english" onclick="onlyOne(this)" required><span>English</span>
+                        <input type="checkbox" name="language" id="non-english" onclick="onlyOne(this)"><span>Non English</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box-about">
+                <div>
+                    <div class="left">
+                        <label for="about">About:</label>
+                    </div>
+                    <div class="right">
+                        <textarea name="about" id="about" rows="10" style="resize: none;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

@@ -67,3 +67,26 @@ function onlyOne(checkbox) {
 		});
 	}
 }
+
+function check_error(){
+	if(list_error.includes(false)){
+		alert("Bạn cần nhập đúng thông tin theo yêu cầu");
+		return false;
+	}
+	return true;
+}
+
+let list_error = [false,false,false,false,false];
+
+let check_alphabates = /^[a-zA-Z]+$/;
+let message_alphabates = 'chỉ được phép chứa các chữ cái a-z hoặc A-Z';
+let check_numeric = /^[0-9]+$/;
+let message_numeric = 'chỉ được phép chứa các số 0-9';
+let check_email = /[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,6}/igm;
+let message_email = 'email không hợp lệ';
+
+check_length('user-id',5,12,0);
+check_length('password',7,12,1);
+check_type('name', check_alphabates, message_alphabates,2);
+check_type('zip-code', check_numeric, message_numeric,3);
+check_type('email', check_email, message_email,4);
